@@ -1,0 +1,5 @@
+# put ruby-enterprise into the path
+PATH=/opt/ruby/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Check on Passenger (mod_rails) every minute
+*/1 * * * *  root  /usr/local/ec2onrails/bin/check_passenger.rb >> /mnt/log/cron.log 2>&1

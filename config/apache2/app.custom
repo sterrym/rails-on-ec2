@@ -1,0 +1,9 @@
+ServerName www.example.com
+ServerAlias example.com
+RailsEnv production
+
+RewriteEngine On
+
+# redirect example.com to www.example.com for canonical domain name usage
+RewriteCond %{HTTP_HOST} ^example\.com [NC]
+RewriteRule (.*) http://www.example.com$1 [L,R=301]
